@@ -13,7 +13,8 @@ NProgress.configure({ showSpinner: false }) // NProgress Configuration
 const whiteList = ['login', 'register', 'registerResult'] // no redirect whitelist
 
 router.beforeEach((to, from, next) => {
-  NProgress.start() // start progress bar
+  // 防止 vuex 中的 GetInfo 早于 mock 运行，导致无法 mock 请求返回结果
+  NProgress.start() // start progress bar 起动进度条
   to.meta && (typeof to.meta.title !== 'undefined' && setDocumentTitle(`${to.meta.title} - ${domTitle}`))
   if (Vue.ls.get(ACCESS_TOKEN)) {
     /* has token */
