@@ -21,10 +21,10 @@ const user = {
       state.name = name
       state.welcome = welcome
     },
-    SET_AVATAR: (state, avatar) => {
+    SET_AVATAR: (state, avatar) => { // set_avatar
       state.avatar = avatar
     },
-    SET_ROLES: (state, roles) => {
+    SET_ROLES: (state, roles) => {  // set_roles
       state.roles = roles
     },
     SET_INFO: (state, info) => {
