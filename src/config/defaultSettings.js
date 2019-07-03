@@ -27,7 +27,7 @@ export default {
   // vue-ls options
   storageOptions: {
     namespace: 'pro__', // key prefix
-    name: 'ls', // name variable Vue.[ls] or this.[$ls],
-    storage: 'local' // storage name session, local, memory
+    name: 'ls', // name variable Vue.[ls] or this.[$ls],  Vue名称变量。(ls)或($ ls)
+    storage: 'local' // storage name session, local, memory  存储名称会话、本地、内存
   }
 }

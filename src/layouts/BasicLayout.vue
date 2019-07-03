@@ -1,6 +1,6 @@
 <template>
   <a-layout :class="['layout', device]">
-    <!-- SideMenu isMobile手机模式 -->
+    <!-- SideMenu isMobile手机模式 collapsed:抽屉的显示隐藏-->
     <a-drawer
       v-if="isMobile()"
       placement="left"

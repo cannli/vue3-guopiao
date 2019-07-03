@@ -1,4 +1,5 @@
 <template>
+  <!--如果是桌面或台式机就未null-->
   <a-layout-sider
     :class="['sider', isDesktop() ? null : 'shadow', theme, fixSiderbar ? 'ant-fixed-sidemenu' : null ]"
     width="256px"
@@ -18,11 +19,11 @@
 </template>
 
 <script>
-import Logo from '@/components/tools/Logo'
-import SMenu from './index'
-import { mixin, mixinDevice } from '@/utils/mixin'
+  import Logo from '@/components/tools/Logo'
+  import SMenu from './index'
+  import { mixin, mixinDevice } from '@/utils/mixin'
 
-export default {
+  export default {
   name: 'SideMenu',
   components: { Logo, SMenu },
   mixins: [mixin, mixinDevice],
