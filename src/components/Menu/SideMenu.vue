@@ -1,5 +1,5 @@
 <template>
-  <!--如果是桌面或台式机就未null-->
+  <!--如果是桌面或台式机就为null-->
   <a-layout-sider
     :class="['sider', isDesktop() ? null : 'shadow', theme, fixSiderbar ? 'ant-fixed-sidemenu' : null ]"
     width="256px"
@@ -38,12 +38,12 @@
       required: false,
       default: 'dark'
     },
-    collapsible: {
+    collapsible: { // 抽屉
       type: Boolean,
       required: false,
       default: false
     },
-    collapsed: {
+    collapsed: {  // menu
       type: Boolean,
       required: false,
       default: false
